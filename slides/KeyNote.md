@@ -2,6 +2,8 @@
 
 2019.11.29  Xianyi Cui
 
+>Note: 1. 曾经对软件开发流程并没有觉得很清晰<br/> 2. 里面有一部分开发环境/UI的锅<br/>3. 理解流程有助于理解DevOps以及扩展开发中的方法论
+
 ---
 <!-- .slide: style="text-align: left;"> -->  
 ## Agenda
@@ -14,6 +16,8 @@
 ---
 
 ## Software Development Flow
+
+>Note: 首先关注目前开发流程，并进行分析
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
@@ -58,6 +62,8 @@
 #### Software Development Life Cycle
 ![](res/software-engineering-agile-model.png)
 
+>Note: 按照agile的定义，我们Devloper更多关注的是Development -> Deployment的。再细分可以分为以下。
+
 ***
 <!-- .slide: style="text-align: left;"> -->  
 ### Focus on Developer side
@@ -69,20 +75,41 @@
 <li class="fragment semi-fade-out" data-fragment-index="1">Publish/Deploy</li>
 <li class="fragment semi-fade-out" data-fragment-index="1">Monitor</li>
 
-----
+>Note: 1. 回顾之前内容对应哪些部分 2. Deploy部分需要对系统整体和环境有更高的理解，会作为后续关注的内容。
+
+---
 
 ## Environment in Development
 
-----
+---
+<!-- .slide: style="text-align: left;"> -->  
 ### Prepare for what?
+|![](res/os_collection.png)|![](res/editor_ide_collection.png)|![](res/runtime_sdk_collection.png)|![](res/dependency_system.png)|![](res/devops_collection.png)|
+|:----:|:---:|:---:|:---:|:-----------:|
+|<span style="font-size: large;" class="fragment fade-up" data-fragment-index="1"><strong>OS</strong></span>|<span style="font-size: large;" class="fragment fade-up" data-fragment-index="1">Editor & IDE</span>|<span style="font-size: large;" class="fragment fade-up" data-fragment-index="1"><strong>SDK & Runtime</strong></span>|<span style="font-size: large;" class="fragment fade-up" data-fragment-index="1">DB & Dependency</span>|<span style="font-size: large;" class="fragment fade-up" data-fragment-index="1">DevOps</span>|
+
+---
+<!-- .slide: style="text-align: left;"> -->  
+### OS & SDK/Runtime
+|Question|Answer|
+|----|----|
+|Can we work without **IDE/Editor**| Yes|
+|Can we work without **OS**|No|
+|Can we **Compile/Run** code without **SDK/Runtime**|No|
+|Can we run our service without **DB**|Yes|
+|Must we deploy service/manage code with git|No|
+
+>Note: 1. 为什么关注IDE？ 因为在visual studio中一起安装了.NET SDK 和 Runtime。 2. We got conclusion
 
 
-----
+---
 
-(OS, Development Dependency, Runtime Dependency)
-|\*Development| Quality Assurance|\*Deployment|
-|---|---|---|
-|**1. Prepare environment**<br/>2. Work on code<br/>sdfasdf<br/>sdfsd|Local test|1. Run on local<br/>2. Run on service|
+### All we care most is to get our <span class="fragment highlight-red" data-fragment-index="1">code</span> <span class="fragment highlight-green" data-fragment-index="1">compiled</span> on <span class="fragment highlight-blue" data-fragment-index="1">some environment</span> and  <span class="fragment highlight-green" data-fragment-index="1">run</span> on some  <span class="fragment highlight-blue" data-fragment-index="1">target environment</span>
+
+>Note: 不绝对，因为有些语言不需要编译
+
+---
+
 
 ***
 
