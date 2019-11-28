@@ -121,6 +121,7 @@
 ***
 
 //todo compile time->runtime diagram
+//todo compile time/runtime JDK/JRE dotnet sdk/dotnet runtime different 
 
 ***
 ## <span class="fragment">Compile time</span>
@@ -168,7 +169,7 @@ Make **xxx.dll** execute/ref by other code on **Linux/Windows installed with .NE
 Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute on **Linux/Windows/Mac** with **xxx.exe/xxx {args}**
 
 ---
-
+<!-- .slide: style="text-align: left;"> --> 
 ### Look back again
 - It is tedious to install various software/dependency.
 - Our disk space getting smaller & we don't know where is the data.
@@ -185,6 +186,8 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 5. Virtual machine? virtualenv(python)?
 6. Basic no way. Create GHOST image?
 
+>Note: GHOST is closed to ultimate anwser.
+
 ---
 
 ### Docker
@@ -192,18 +195,37 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 >Note: Finally the big boss.
 
 ---
-
+<!-- .slide: style="text-align: left;"> --> 
 ### What's Docker
 
->Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+>Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. 
+
+>Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+
+---
+<!-- .slide: style="text-align: left;"> --> 
+### Image & Container
+Image: VHD/ISO   
+Container: Virtual machine
+
+---
+
+### What image (could) included
+1. OS
+2. SDK/Runtime
+3. DevOps tools
 
 ---
 
 ## How Docker Affect Compile time
+1. If we just want to compile
+2. build image
 
 ---
 
 ## How Docker Affect Run time
+1. If we just want to run
+2. comsume image
 
 ---
 
