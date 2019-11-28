@@ -6,7 +6,7 @@
 <!-- .slide: style="text-align: left;"> -->  
 ## Agenda
 <li class="fragment">Software Development Life Cycle(SDLC)</li>
-<li class="fragment">Compile time & Run time</li>
+<li class="fragment">Environment in Development</li>
 <li class="fragment">Docker</li> 
 <li class="fragment">Workflow Review & Optimize</li> 
 <li class="fragment">What's more</li> 
@@ -26,12 +26,12 @@
 <li class="fragment">Pull code</li> 
 <li class="fragment">Generate Dll(library)/Exe(executable)</li> 
 <li class="fragment">Test executable or libary behaviour</li> 
-<li class="fragment">Copy to others for usage/Use Azure SDK to deploy to Cloud</li> 
+<li class="fragment">Copy <strong>binary</strong> to others for usage/Use Azure SDK to deploy to Cloud</li> 
 </ol>
 
 ***
 <!-- .slide: style="text-align: left;"> -->  
-## Current (.NET Core)
+### Current (.NET Core)
 <ol>
 <li class="fragment">Request new Windows/Linux machine</li> 
 <li class="fragment">Install <strong>Visual Studio</strong>, <strong>Git</strong>, <strong>.NET Core SDK(Runtime included)</strong></li> 
@@ -40,23 +40,53 @@
 <li class="fragment">Pull code</li> 
 <li class="fragment">Generate Library Dll/Executable dll</li> 
 <li class="fragment">Test executable or library behaviour</li> 
-<li class="fragment">Copy to others for usage/Usage Azure SDK to deploy to Cloud</li> 
+<li class="fragment">Copy <strong>binary</strong> to others for usage/Usage Azure SDK to deploy to Cloud</li> 
+</ol>
+
+***
+<!-- .slide: style="text-align: left;"> -->  
+### Current (Python)
+<ol>
+<li class="fragment">Request new Windows/Linux machine</li> 
+<li class="fragment">Install <strong>Python</strong>, <strong>Git</strong>, <strong>VS Code</strong></li> 
+<li class="fragment">Pull code</li> 
+<li class="fragment">Test python file</li> 
+<li class="fragment">Copy <strong>python file</strong> to others for usage</li> 
 </ol>
 
 ---
-
-## Software Development Life Cycle
-
-
-- Prepare Environment(OS, Development Dependency, Runtime Dependency)
-- Init project (Clone Repo/Local playground)
-- Coding
-- *Compiling*
-- Testing
-- Publish/Deploy
-- Monitor
+#### Software Development Life Cycle
+![](res/software-engineering-agile-model.png)
 
 ***
+<!-- .slide: style="text-align: left;"> -->  
+### Focus on Developer side
+
+<li class="fragment highlight-blue" data-fragment-index="1">Prepare Environment</li>
+<li>Coding</li>
+<li class="fragment highlight-blue" data-fragment-index="1">Compiling</li>
+<li class="fragment highlight-blue" data-fragment-index="1">Test (Local Run)</li>
+<li class="fragment semi-fade-out" data-fragment-index="1">Publish/Deploy</li>
+<li class="fragment semi-fade-out" data-fragment-index="1">Monitor</li>
+
+----
+
+## Environment in Development
+
+----
+### Prepare for what?
+
+
+----
+
+(OS, Development Dependency, Runtime Dependency)
+|\*Development| Quality Assurance|\*Deployment|
+|---|---|---|
+|**1. Prepare environment**<br/>2. Work on code<br/>sdfasdf<br/>sdfsd|Local test|1. Run on local<br/>2. Run on service|
+
+***
+
+
 ## 
 
 

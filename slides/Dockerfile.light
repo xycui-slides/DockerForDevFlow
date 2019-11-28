@@ -15,7 +15,7 @@ WORKDIR /src/revealSrc
 RUN ../init.sh
 COPY KeyNote.md .
 COPY index.html .
-COPY res/ .
+COPY res/ res/
 
 FROM base AS final
 WORKDIR /app
