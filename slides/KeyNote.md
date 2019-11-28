@@ -101,6 +101,16 @@
 
 >Note: 1. 为什么关注IDE？ 因为在visual studio中一起安装了.NET SDK 和 Runtime。 2. We got conclusion
 
+***
+<!-- .slide: style="text-align: left;"> -->  
+### What SDK/Runtime provide
+1. Compiler         
+2. Build tool
+3. Package management
+4. SDK
+5. ......
+
+>Note: 1. Compiler, gcc, csc, javac 2. Build tool, msbuild, dotnet build, bazel, gradel, maven 3. npm, pip, nuget, maven, 
 
 ---
 
@@ -108,23 +118,34 @@
 
 >Note: 不绝对，因为有些语言不需要编译
 
----
+***
+## <span class="fragment">Compile time</span>
+## <span class="fragment">Runtime</span>
 
+---
+<!-- .slide: style="text-align: left;"> --> 
+### Deep dive: Compile time 
+Turn **code logic** into **executable/library binary** target **specific runtime** with **dependencies & tools** under **SDK Prepared environment**   
 
 ***
+<!-- .slide: style="text-align: left;"> --> 
+### Java Compile time
 
+Turn **java file/project** into **xxx.jar** target **java(JVM) runtime** with **maven/gradel** under **Linux/Windows installed with JDK & maven/gradel**
 
-## 
+***
+<!-- .slide: style="text-align: left;"> --> 
+### .NET Core Compile time
+Turn **c# file/project** into **xxx.dll** target **portable .NET Core runtime** with **dotnet cli & nuget** under **Linux/Windows installed with .NET Core SDK**
 
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Native Compile time
+Turn **cpp/c file/project** into **xxx.dll/xxx.so/xxx.dylib/xxx.exe/xxx** target **win x64/x86, mac x64, linux x64, arm x86/x64** with **make/cmake/bazel** under **Linux/Mac/Windows installed with gcc & make/cmake/bazel**    
 
 ---
 
-## Compile-time & Runtime
-Compile-time: Turn **code logic** into **executable/library binary** target **specific runtime** with **dependencies & tools** under **SDK Prepared environment**     
-- Java: Turn **java file/project** into **xxx.jar** target **java runtime** with **maven/gradel** under **Linux/Windows installed with JDK & maven/gradel**
-- .NET Core: Turn **c# file/project** into **xxx.dll** target **portable .NET Core runtime** with **dotnet cli & nuget** under **Linux/Windows installed with .NET Core SDK**
-- Native: Turn **cpp/c file/project** into **xxx.dll/xxx.so/xxx.dylib/xxx.exe/xxx** target **win x64/x86, mac x64, linux x64, arm x86/x64** with **make/cmake/bazel** under **Linux/Mac/Windows installed with gcc & make/cmake/bazel**    
-
+### Deep dive: Runtime
 Runtime: Make **executable/libary binary** execute on the **Runtime prepared environment** with given **arguments/command**
 - Java : Make **xxx.jar** execute/ref by other code on **Linux/Windows installed with JRE** with **java xxx.jar {args}** command
 - .NET Core : Make **xxx.dll** execute/ref by other code on **Linux/Windows installed with .NET Core runtime** with **dotnet xxx.dll {args}**
