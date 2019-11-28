@@ -119,6 +119,10 @@
 >Note: 不绝对，因为有些语言不需要编译
 
 ***
+
+//todo compile time->runtime diagram
+
+***
 ## <span class="fragment">Compile time</span>
 ## <span class="fragment">Runtime</span>
 
@@ -144,20 +148,72 @@ Turn **c# file/project** into **xxx.dll** target **portable .NET Core runtime** 
 Turn **cpp/c file/project** into **xxx.dll/xxx.so/xxx.dylib/xxx.exe/xxx** target **win x64/x86, mac x64, linux x64, arm x86/x64** with **make/cmake/bazel** under **Linux/Mac/Windows installed with gcc & make/cmake/bazel**    
 
 ---
-
+<!-- .slide: style="text-align: left;"> --> 
 ### Deep dive: Runtime
-Runtime: Make **executable/libary binary** execute on the **Runtime prepared environment** with given **arguments/command**
-- Java : Make **xxx.jar** execute/ref by other code on **Linux/Windows installed with JRE** with **java xxx.jar {args}** command
-- .NET Core : Make **xxx.dll** execute/ref by other code on **Linux/Windows installed with .NET Core runtime** with **dotnet xxx.dll {args}**
-- Native: Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute on **Linux/Windows/Mac** with **xxx.exe/xxx {args}**
+Make **executable/libary binary** execute on the **Runtime prepared environment** with given **arguments/command**
 
-----
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Java Runtime
+Make **xxx.jar** execute/ref by other code on **Linux/Windows installed with JRE** with **java xxx.jar {args}** command
 
-## What make us headache
-Clean environment
-dependency
+***
+<!-- .slide: style="text-align: left;"> --> 
+### .NET Core Runtime
+Make **xxx.dll** execute/ref by other code on **Linux/Windows installed with .NET Core runtime** with **dotnet xxx.dll {args}**
 
-----
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Native Runtime
+Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute on **Linux/Windows/Mac** with **xxx.exe/xxx {args}**
+
+---
+
+### Look back again
+- It is tedious to install various software/dependency.
+- Our disk space getting smaller & we don't know where is the data.
+- It is hard for us to create a new clean environment.
+- How can we make sure the others' environment?
+
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Let's think more
+1. Linux vs Windows
+2. Common used windows folder
+3. Always think about clean environment/depenency when you write code
+4. If you have depedency make it installed on target environment on **runtime**
+5. Virtual machine? virtualenv(python)?
+6. Basic no way. Create GHOST image?
+
+---
+
+### Docker
+
+>Note: Finally the big boss.
+
+---
+
+### What's Docker
+
+>Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+
+---
+
+## How Docker Affect Compile time
+
+---
+
+## How Docker Affect Run time
+
+---
+
+## Workflow Review & Optimize
+
+---
+
+## What's More
+
+---
 
 ## Phrases
 **Windows**/Linux/Mac    
@@ -179,29 +235,8 @@ JUnit/**NUnit**/**xUnit**/JMeter/Siege/Selenium
 ## What is Deploy
 Make the executable program(compiled binaries/source code) runs on remote environment prepared ready
 
-
-----
-
-## Docker
-
-----
-
-## How Docker Affect Compile time
-
-----
-
-## How Docker Affect Run time
-
-----
-
-## Workflow Review & Optimize
-
-----
-
-## What's More
-
-----
-
+--- 
+<!-- .slide: style="text-align: left;"> --> 
 ## Reference
 - SDLC: https://en.wikipedia.org/wiki/Software_development_process
 - SDLC: https://stackify.com/what-is-sdlc/
