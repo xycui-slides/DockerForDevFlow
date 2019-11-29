@@ -368,14 +368,33 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 ## What's More
 ---
 <!-- .slide: style="text-align: left;"> --> 
-### Go Deeper
-- Windows containerization & Linux containerization
+### Windows containerization
+![](res/container-arch-hyperv.png)
+![](res/container-arch-process.png)  
 
 >Note: Linux start from 2001, windows support it from windows 10.
----
 
-## Phrases
+---
+## What about frontend development flow
+
+***
+## What about machine learning flow
+
+*** 
+## What about work flow
+- Present content
+- (Raw content + metadata) + host = Present
+- Markdown, HTML, Web server, node, python, 
+
+---
 <!-- .slide: style="text-align: left;"> --> 
+### What is Deploy
+Make the executable program(compiled binaries/source code) runs on remote environment prepared ready
+
+>Note> Go back to environment preparing graph
+---
+<!-- .slide: style="text-align: left;"> --> 
+## Phrases
 **Windows**/Linux/Mac    
 **Git**/SVN/TFS    
 JDK/**.NET Core SDK**/.NET SDK/    
@@ -388,24 +407,8 @@ gcc/javac/csc
 JUnit/**NUnit**/**xUnit**/JMeter/Siege/Selenium
 .NET Framework/.NET Core/JRE/Python/Nodejs
 
----
-## What about frontend development flow
-
-***
-## What about machine learning flow
-
-*** 
-## What about work flow
-- Present content
-- (Raw content + metadata) + host = Present
-
-
----
-<!-- .slide: style="text-align: left;"> --> 
-### What is Deploy
-Make the executable program(compiled binaries/source code) runs on remote environment prepared ready
-
 --- 
+
 <!-- .slide: style="text-align: left;"> --> 
 ### Reference
 - SDLC: https://en.wikipedia.org/wiki/Software_development_process
