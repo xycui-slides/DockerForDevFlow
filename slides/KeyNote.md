@@ -315,9 +315,14 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 ---
 <!-- .slide: style="text-align: left;"> --> 
 ### How Docker Affect Compile/Run time
+|Item|Before|After|
+|----|----|----|
+|**Env Prepare**|Install SDK/Runtime on machine|docker pull && docker run|
+|**Version Select**|Almost impossible|change docker image & run|
+|**Dependency Prepare**|Install as much as dependency you need|docker pull && docker run|
+|**Clean installation**|Registry? AppData? Program File?|docker image rm|
 
-
----
+***
 <!-- .slide: style="text-align: left;"> --> 
 ### How Docker Affect Dev LifeCycle
 |Item|Before|After|
@@ -344,6 +349,7 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 >Note: No more SDK installation.
 
 ***
+<!-- .slide: style="text-align: left;"> --> 
 ### .NET Core(Product)
 1. Use Current Windows/Linux machine
 2. Install Git, Editor/IDE, Docker, SDK(For Debug)
@@ -355,9 +361,13 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 
 ---
 
-## What's More
+## Practice
+
 ---
 
+## What's More
+---
+<!-- .slide: style="text-align: left;"> --> 
 ### Go Deeper
 - Windows containerization & Linux containerization
 
@@ -365,6 +375,7 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 ---
 
 ## Phrases
+<!-- .slide: style="text-align: left;"> --> 
 **Windows**/Linux/Mac    
 **Git**/SVN/TFS    
 JDK/**.NET Core SDK**/.NET SDK/    
@@ -377,16 +388,20 @@ gcc/javac/csc
 JUnit/**NUnit**/**xUnit**/JMeter/Siege/Selenium
 .NET Framework/.NET Core/JRE/Python/Nodejs
 
+---
 ## What about frontend development flow
 
+***
 ## What about machine learning flow
 
-## What is Deploy
+---
+<!-- .slide: style="text-align: left;"> --> 
+### What is Deploy
 Make the executable program(compiled binaries/source code) runs on remote environment prepared ready
 
 --- 
 <!-- .slide: style="text-align: left;"> --> 
-## Reference
+### Reference
 - SDLC: https://en.wikipedia.org/wiki/Software_development_process
 - SDLC: https://stackify.com/what-is-sdlc/
 - Agile vs DevOps: https://decideconsulting.com/sdlc-comparision-agile-vs-devops/
@@ -395,26 +410,31 @@ Make the executable program(compiled binaries/source code) runs on remote enviro
 - Software Development lifecycle: https://medium.com/@jilvanpinheiro/software-development-life-cycle-sdlc-phases-40d46afbe384
 
 ***
-## Reference(Container)
+<!-- .slide: style="text-align: left;"> --> 
+### Reference(Container)
 - Isolation Modes: https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container
 
 ***
-
-## Reference(Docker)
+<!-- .slide: style="text-align: left;"> --> 
+### Reference(Docker)
 - Docker life cycle: https://medium.com/@nagarwal/lifecycle-of-docker-container-d2da9f85959
 - Docker & VM: https://medium.com/faun/introduction-to-docker-life-cycle-3bf3aeba883
 - Architecture: https://docs.docker.com/engine/docker-overview/#docker-architecture
 - Container (zh-cn): https://zhuanlan.zhihu.com/p/39155341
 
 ***
-
-## Reference(Build tool)
+<!-- .slide: style="text-align: left;"> --> 
+### Reference(Build tool)
 - Maven: https://maven.apache.org
 - Gradel: https://gradle.org/
 - Ant: https://ant.apache.org/
 
 ***
-
-## Reference(Tools)
+<!-- .slide: style="text-align: left;"> --> 
+### Reference(Tools)
 - Markdown Guide: https://www.markdownguide.org/basic-syntax/
 - Reveal.js: https://github.com/hakimel/reveal.js/
+
+---
+
+# Thanks
