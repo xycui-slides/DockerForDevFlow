@@ -394,6 +394,12 @@ JUnit/**NUnit**/**xUnit**/JMeter/Siege/Selenium
 ***
 ## What about machine learning flow
 
+*** 
+## What about work flow
+- Present content
+- (Raw content + metadata) + host = Present
+
+
 ---
 <!-- .slide: style="text-align: left;"> --> 
 ### What is Deploy
