@@ -99,7 +99,7 @@
 |Can we run our service without **DB**|Yes|
 |Must we deploy service/manage code with git|No|
 
->Note: 1. 为什么关注IDE？ 因为在visual studio中一起安装了.NET SDK 和 Runtime。 2. We got conclusion
+>Note: 1. 为什么关注IDE？ 因为在visual studio中一起安装了.NET SDK 和 Runtime。
 
 ***
 <!-- .slide: style="text-align: left;"> -->  
@@ -110,7 +110,7 @@
 4. SDK
 5. ......
 
->Note: 1. Compiler, gcc, csc, javac 2. Build tool, msbuild, dotnet build, bazel, gradel, maven 3. npm, pip, nuget, maven, 
+>Note: 1. Compiler, gcc, csc, javac 2. Build tool, msbuild, dotnet build, bazel, gradel, maven 3. npm, pip, nuget, maven,  3. We got conclusion
 
 ---
 
@@ -119,13 +119,11 @@
 >Note: 不绝对，因为有些语言不需要编译
 
 ***
-
-//todo compile time->runtime diagram
-//todo compile time/runtime JDK/JRE dotnet sdk/dotnet runtime different 
-
-***
-## <span class="fragment">Compile time</span>
-## <span class="fragment">Runtime</span>
+<!-- .slide: style="text-align: left;"> -->  
+### Compile to Run
+![](res/compiletime_runtime.png)
+- **Compile time:** [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
+- **Runtime:** [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html), [.NET Core Runtime](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ---
 <!-- .slide: style="text-align: left;"> --> 
@@ -261,43 +259,109 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 <!-- .slide: style="text-align: left;"> --> 
 ### What's Docker
 
->Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. 
+>Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. 
 
->Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+>Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host.
 
 ---
 <!-- .slide: style="text-align: left;"> --> 
 ### Image & Container
-Image: VHD/ISO   
-Container: Virtual machine
+|Docker(Containerization)|VM(Virtualization)|
+|----|----|
+|Docker image|Base image(ISO/VHD)|
+|Docker container|Virtual machine instance|
+<br/>   
+
+**Virtual machine:**  
+    Create single/multiple virtual machine instance with base image.    
+
+**Docker:**
+    Run docker image and get container instance/instances
+
+>Note: Container technical from linux. 
+
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Image & Container
+![](res/vm_vs_container.png)
+
+>Note: It is much more light weight. 
+
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Image & Container
+![](res/virtualization-vs-containers.png)
+
+>Note: It is much more light weight. 
+
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Image & Container
+![](res/docker_life_cycle.jpeg)
+
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Docker CLI & Life cycle
+![](res/image_container_lifecycle.png)
 
 ---
-
+<!-- .slide: style="text-align: left;"> --> 
 ### What image (could) included
 1. OS
 2. SDK/Runtime
 3. DevOps tools
+4. Depenedency
 
 ---
+<!-- .slide: style="text-align: left;"> --> 
+### How Docker Affect Compile/Run time
 
-## How Docker Affect Compile time
-1. If we just want to compile
-2. build image
 
 ---
-
-## How Docker Affect Run time
-1. If we just want to run
-2. comsume image
+<!-- .slide: style="text-align: left;"> --> 
+### How Docker Affect Dev LifeCycle
+|Item|Before|After|
+|----|----|----|
+|**Product**|Executable|Docker image|
+|**Reuse level**|Library|Library + docker image|
+|**Target Deploy Envrionment**|Well prepared|Just docker|
 
 ---
 
 ## Workflow Review & Optimize
 
+***
+<!-- .slide: style="text-align: left;"> --> 
+### .NET Core(Playground)
+1. Use Current Windows/Linux Machine
+2. Install Git, Editor, Docker.
+3. Pull MySql, Redis, etc. image if you need(Runtime).
+4. Pull code
+5. Run sdk image && attach folder
+6. Compile in SDK container
+7. Run runtime image && attach folder
+
+>Note: No more SDK installation.
+
+***
+### .NET Core(Product)
+1. Use Current Windows/Linux machine
+2. Install Git, Editor/IDE, Docker, SDK(For Debug)
+3. Pull code
+4. Write DockerFile(describe docker build)
+5. Write docker-compose.yml(for dependency)
+6. Docker build 
+7. docker run / docker-compose up to run.
+
 ---
 
 ## What's More
+---
 
+### Go Deeper
+- Windows containerization & Linux containerization
+
+>Note: Linux start from 2001, windows support it from windows 10.
 ---
 
 ## Phrases
@@ -329,6 +393,18 @@ Make the executable program(compiled binaries/source code) runs on remote enviro
 - Agile vs DevOps: https://www.guru99.com/agile-vs-devops.html
 - Devops lifecycle: https://medium.com/edureka/devops-lifecycle-8412a213a654
 - Software Development lifecycle: https://medium.com/@jilvanpinheiro/software-development-life-cycle-sdlc-phases-40d46afbe384
+
+***
+## Reference(Container)
+- Isolation Modes: https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container
+
+***
+
+## Reference(Docker)
+- Docker life cycle: https://medium.com/@nagarwal/lifecycle-of-docker-container-d2da9f85959
+- Docker & VM: https://medium.com/faun/introduction-to-docker-life-cycle-3bf3aeba883
+- Architecture: https://docs.docker.com/engine/docker-overview/#docker-architecture
+- Container (zh-cn): https://zhuanlan.zhihu.com/p/39155341
 
 ***
 
