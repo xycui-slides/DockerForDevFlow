@@ -2,7 +2,7 @@
 
 2019.11.29  Xianyi Cui
 
->Note: 1. 曾经对软件开发流程并没有觉得很清晰<br/> 2. 里面有一部分开发环境/UI的锅<br/>3. 理解流程有助于理解DevOps以及扩展开发中的方法论
+>Note: 1. 曾经对软件开发流程并没有觉得很清晰<br/> 2. 里面有一部分开发环境/UI的锅<br/>3. 理解流程有助于理解DevOps以及扩展开发中的方法论 <br/>4. 自己的思考学习过程
 
 ---
 <!-- .slide: style="text-align: left;"> -->  
@@ -134,19 +134,65 @@ Turn **code logic** into **executable/library binary** target **specific runtime
 
 ***
 <!-- .slide: style="text-align: left;"> --> 
-### Java Compile time
+### .NET Framework Compile time
+Turn **c# file/project** into **xxx.dll/xxx.exe** target **.NET Framework(Windows)** with **msbuild & nuget** under **Windows installed with .NET SDK**
 
-Turn **java file/project** into **xxx.jar** target **java(JVM) runtime** with **maven/gradel** under **Linux/Windows installed with JDK & maven/gradel**
+- BuildTool
+    ```
+    MSBuild MyApp.sln /t:Rebuild /p:Configuration=Release 
+    ```
+
+- Compiler
+    ```
+    csc -define:DEBUG -optimize -out:File2.exe *.cs       
+    ```
 
 ***
 <!-- .slide: style="text-align: left;"> --> 
 ### .NET Core Compile time
-Turn **c# file/project** into **xxx.dll** target **portable .NET Core runtime** with **dotnet cli & nuget** under **Linux/Windows installed with .NET Core SDK**
+Turn **c# file/project** into **xxx.dll** target **portable .NET Core runtime(Cross platform)** with **dotnet cli & nuget** under **Linux/Windows installed with .NET Core SDK**
+
+- BuildTool
+    ```
+    dotnet build -c Release                               
+    ```
+- Compiler
+    ```
+    csc -define:DEBUG -optimize -out:File2.exe *.cs       
+    ```
+
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Java Compile time
+
+Turn **java file/project** into **xxx.jar** target **java(JVM) runtime** with **maven/gradel** under **Linux/Windows installed with JDK & maven/gradel**
+
+- BuildTool
+    ```
+    mvn package                                     
+    ant                                             
+    gradle build                                    
+    ```
+
+- Compiler
+    ```
+    javac -d ./build *.java                         
+    ```
 
 ***
 <!-- .slide: style="text-align: left;"> --> 
 ### Native Compile time
 Turn **cpp/c file/project** into **xxx.dll/xxx.so/xxx.dylib/xxx.exe/xxx** target **win x64/x86, mac x64, linux x64, arm x86/x64** with **make/cmake/bazel** under **Linux/Mac/Windows installed with gcc & make/cmake/bazel**    
+
+- BuildTool
+    ```
+    bazel / make                                    
+    ```
+
+- Compiler
+    ```
+    g++/gcc -o hello hello.cpp                      
+    ```
 
 ---
 <!-- .slide: style="text-align: left;"> --> 
@@ -155,13 +201,30 @@ Make **executable/libary binary** execute on the **Runtime prepared environment*
 
 ***
 <!-- .slide: style="text-align: left;"> --> 
-### Java Runtime
-Make **xxx.jar** execute/ref by other code on **Linux/Windows installed with JRE** with **java xxx.jar {args}** command
+### .NET Framework Runtime
+Make **xxx.exe** execute/ref by other code on **Windows installed with .NET Framework Runtime(By default)** with **xxx.exe {args}**
+
+```
+xxx.exe arg1 arg2
+```
 
 ***
 <!-- .slide: style="text-align: left;"> --> 
 ### .NET Core Runtime
 Make **xxx.dll** execute/ref by other code on **Linux/Windows installed with .NET Core runtime** with **dotnet xxx.dll {args}**
+
+```
+dotnet xxx.dll arg1 arg2
+```
+
+***
+<!-- .slide: style="text-align: left;"> --> 
+### Java Runtime
+Make **xxx.jar** execute/ref by other code on **Linux/Windows installed with JRE** with **java xxx.jar {args}** command
+
+```
+java xxx.jar arg1 arg2
+```
 
 ***
 <!-- .slide: style="text-align: left;"> --> 
@@ -266,5 +329,16 @@ Make the executable program(compiled binaries/source code) runs on remote enviro
 - Agile vs DevOps: https://www.guru99.com/agile-vs-devops.html
 - Devops lifecycle: https://medium.com/edureka/devops-lifecycle-8412a213a654
 - Software Development lifecycle: https://medium.com/@jilvanpinheiro/software-development-life-cycle-sdlc-phases-40d46afbe384
+
+***
+
+## Reference(Build tool)
+- Maven: https://maven.apache.org
+- Gradel: https://gradle.org/
+- Ant: https://ant.apache.org/
+
+***
+
+## Reference(Tools)
 - Markdown Guide: https://www.markdownguide.org/basic-syntax/
-- Reveal.js
+- Reveal.js: https://github.com/hakimel/reveal.js/
