@@ -386,7 +386,7 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 ### What is Deploy
 Make the executable program(compiled binaries/source code) runs on remote environment prepared ready
 
->Note> Go back to environment preparing graph
+>Note: Go back to environment preparing graph
 ---
 <!-- .slide: style="text-align: left;"> --> 
 ## Phrases
@@ -403,8 +403,7 @@ JUnit/**NUnit**/**xUnit**/JMeter/Siege/Selenium
 .NET Framework/.NET Core/JRE/Python/Nodejs
 
 --- 
-
-<!-- .slide: style="text-align: left;"> --> 
+<!-- .slide: style="font-size: 0.8em !important; text-align: left;"> --> 
 ### Reference
 - SDLC: https://en.wikipedia.org/wiki/Software_development_process
 - SDLC: https://stackify.com/what-is-sdlc/
