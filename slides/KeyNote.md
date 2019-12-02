@@ -259,9 +259,8 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 <!-- .slide: style="text-align: left;"> --> 
 ### What's Docker
 
->Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. 
-
->Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host.
+- Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. 
+- Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host.
 
 ---
 <!-- .slide: style="text-align: left;"> --> 
@@ -270,13 +269,9 @@ Make **xxx.dll/xxx.so/xxx.dylib** ref by other code or **xxx.exe/xxx** execute o
 |----|----|
 |Docker image|Base image(ISO/VHD)|
 |Docker container|Virtual machine instance|
-<br/>   
 
-**Virtual machine:**  
-    Create single/multiple virtual machine instance with base image.    
-
-**Docker:**
-    Run docker image and get container instance/instances
+<li><strong>Virtual machine:</strong> Create single/multiple virtual machine instance with base image</li>
+<li><strong>Docker:</strong> Run docker image and get container instance/instances</li>
 
 >Note: Container technical from linux. 
 
