@@ -22,4 +22,4 @@ All you need for samples could be done by **Docker**. Please install it via [Off
 ![](media/screen_record.gif)
 
 # Online Link
-[Online Deck](https://xycui-slidedeck.github.io/DockerForDevFlow/exports/web)
+[Online Deck](https://xycui-slides.github.io/DockerForDevFlow/exports/web/)
